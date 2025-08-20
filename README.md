@@ -27,7 +27,8 @@ directory.
 After creating a new repository based on this template, please undertake the following steps:
 
 1. Replace the template specific parts of this readme file with suitable readme documentation for your new repository.
-1. More?
+1. Rename `docs/your-standards.11tydata.json`, replacing the `your-standards` part with the name to be used when
+   published
 
 ### Creating your documentation
 
@@ -42,13 +43,13 @@ TODO
 To see how your docs look locally before publishing them you can use a container image:
 
 ```bash
-docker run -p "8080:8080" -v "./docs:/site/docs/your-standards" ukhsa-std-harness
+docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghrc.io/ukhsa-collaboration/standards-org
 ```
 
 *Replace `your-standards` with the path you'd like to expose your docs at.*
 
-After running this command you can view your docs by going to [http://localhost:8080/your-standards/][3], again replacing
-`your-standards` with the path you specified previously.
+After running this command you can view your docs by going to [http://localhost:8080/your-standards/][3], again
+replacing `your-standards` with the path you specified previously.
 While this docker command is running it will notice when files change and update them so you can see how they look live.
 
 ## Contributing
