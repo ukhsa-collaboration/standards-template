@@ -30,6 +30,8 @@ After creating a new repository based on this template, please undertake the fol
 1. Rename `docs/your-standards.11tydata.json`, replacing the `your-standards` part with the name to be used when
    published.
 1. Run `npm install` from the root of this repository to install the dev dependencies.
+1. Update the `CONTRIBUTING.md` guidelines to meet your expectations for contributors. This file is currently written
+   for the audience of the template repository so will need to changed.
 
 ### Creating your documentation
 
