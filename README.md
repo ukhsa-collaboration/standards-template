@@ -28,7 +28,8 @@ After creating a new repository based on this template, please undertake the fol
 
 1. Replace the template specific parts of this readme file with suitable readme documentation for your new repository.
 1. Rename `docs/your-standards.11tydata.json`, replacing the `your-standards` part with the name to be used when
-   published
+   published.
+1. Run `npm install` from the root of this repository to install the dev dependencies.
 
 ### Creating your documentation
 
