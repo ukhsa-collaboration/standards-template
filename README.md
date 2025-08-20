@@ -41,6 +41,28 @@ At present, the `your-standards.11tydata.json` file is also provided which sets 
 of documentation so that they are displayed in a [sub-navigation layout][6].
 Of course if you want to use a different layout, you can.
 
+### Committing your documentation
+
+When committing your documentation, assuming you have successfully run `npm install` from the repository setup steps,
+you will be provided with a commit message template with instructions on how to commit correctly.
+If your commit message doesn't conform to the expectations described in the template your commit will be flagged as
+having failed a build step by a commit linting GitHub action which runs whenever a commit is pushed to GitHub.
+Please fix any failing commits!
+
+Additionally on commit, a `pre-commit` hook runs to check that the documentation in the `docs/` directory conforms to
+our predefined markdown formatting standards.
+If it doesn't, then the commit will fail meaning you will need to fix the issues before creating the commit.
+The output of the `pre-commit` hook will tell you what is wrong so you can manually fix issues, however, you can also
+use the same tool which provides this linting to fix the issues:
+
+```bash
+# this is the pre-commit hook which runs to check if your markdown conforms
+npx remark docs/ --ext .md --use remark-preset-lint-consistent --use remark-preset-lint-recommended --frail
+
+# if you have issues you can run this command to fix the problems automatically
+npx remark docs/ --ext .md --output
+```
+
 ### Publishing your documentation
 
 Contact a member of the [Org Standards Admins][7] team and they will add your repository to the [standards-org][8] repo.
