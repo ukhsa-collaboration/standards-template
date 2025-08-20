@@ -1,6 +1,7 @@
 # Contributing to UKHSA Organisational Standards
 
-Thank you for your interest in contributing to the UKHSA Organisational Standards! This repository contains standards, guidelines and best practices that define how we do engineering at UKHSA and what we expect from our teams and partners.
+Thank you for your interest in contributing to the UKHSA Organisational Standards!
+This repository contains a template for creating standards documentation.
 
 ## Table of Contents
 
@@ -46,15 +47,15 @@ If you're an external contributor make sure to [fork this project first][26]
 If you are a member of the `ukhsa-collaboration` GitHub organisation, you can clone the repository directly:
 
 ```bash
-git clone https://github.com/ukhsa-collaboration/standards-org.git
-cd standards-org
+git clone https://github.com/ukhsa-collaboration/standards-template.git
+cd standards-template
 ```
 
 Otherwise, if you are an external contributor, you can clone your fork:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/standards-org.git
-cd standards-org
+git clone https://github.com/YOUR-USERNAME/standards-template.git
+cd standards-template
 ```
 
 #### 3. Install dependencies
@@ -82,9 +83,11 @@ npm install
 
 ### Understanding the Repository Structure
 
-- `/docs/` - Documentation content written in Markdown
-- `/src/` - Eleventy configurations and customisations
-- `eleventy.config.json` - Eleventy configuration file
+This repository is a template repository and therefore it contains boilerplate files for people to build their
+documentation on top of.
+In the root of the repository exist a number of configuration files for linting etc.
+The main directory where users should add their documentation after creating their own repository from this template is
+the `docs/` directory which contains two placeholder files at present.
 
 ## Contributing Process
 
@@ -327,26 +330,29 @@ Resolves issue #123"
 - Use [RFC2119][41] keywords (**MUST**, **SHOULD**, **MAY**, etc.) correctly to indicate requirement levels.
 - Include practical examples where appropriate.
 - Follow Markdown best practices for formatting.
-- Documentation **SHOULD NOT** be added to the `docs/` directory directly (except the landing / core pages), as it is pulled in from other sources.
-- Documentation is pulled in from other repositories see `src/build/obtain-docs.js` to add other repositories or to see how this works.
-- Preview changes locally using `npx eleventy --serve` before submitting.
 
 ## Viewing the Guidelines Locally
 
-The documentation is organised into various markdown files under the `docs/` directory. This is for the most part pulled in from other repositories using `npm run content`. You can navigate and edit these files directly but remember these changes will not be persisted to this repository so if you want to update those docs then do so at the relevant down stream repository. To preview the documentation as it will appear on the website:
+It's not much use to see the template files in the `docs/` directory given they intentionally have very little content,
+however, you can run this command to locally view them:
 
 ```bash
-# Start the eleventy development server
-npx eleventy --serve
+docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghrc.io/ukhsa-collaboration/standards-org
 ```
 
-This will start a local server, and you can view the documentation in your browser at `http://localhost:8080`.
+*Replace `your-standards` with the path you'd like to expose your docs at.*
+
+After running this command you can view your docs by going to [http://localhost:8080/your-standards/][42], again
+replacing `your-standards` with the path you specified previously.
+While this docker command is running it will notice when files change and update them so you can see how they look live.
 
 ## Documentation Deployment
 
-The documentation is continuously deployed from the `main` branch by GitHub Actions, using the workflow defined in `/.github/workflows/publish-guidelines.yml`.
+This is a template repository so no documentation is published from this repository.
 
-When documentation changes are merged into the `main` branch, the documentation site is automatically updated and re-published on GitHub Pages.
+A GitHub action exists in the workflows dir which will trigger a deployment of the main `standards-org` repository on
+merges to the `main` branch, however, it is gated so that it doesn't run on this repository and will therefore only run
+on repositories created from this template.
 
 Thank you for contributing to improving engineering standards, guidelines and best practices across the UKHSA!
 
@@ -391,3 +397,4 @@ Thank you for contributing to improving engineering standards, guidelines and be
 [39]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch
 [40]: https://ukhsa-collaboration.github.io/standards-org/
 [41]: https://datatracker.ietf.org/doc/html/rfc2119
+[42]: http://localhost:8080/your-standards/
