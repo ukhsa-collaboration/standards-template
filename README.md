@@ -32,11 +32,17 @@ After creating a new repository based on this template, please undertake the fol
 
 ### Creating your documentation
 
-TODO
+All your documentation should be written in Markdown in the `docs/` directory.
+The documentation is published using [Eleventy][3] along with the [UK Gov Eleventy Plugin][4] for styling.
+
+A basic `index.md` is provided which can be modified to provide the index page for your documentation.
+At present, the `your-standards.11tydata.json` file is also provided which sets some common [front matter][5] for the pages
+of documentation so that they are displayed in a [sub-navigation layout][6].
+Of course if you want to use a different layout, you can.
 
 ### Publishing your documentation
 
-TODO
+Contact a member of the [Org Standards Admins][7] team and they will add your repository to the [standards-org][8] repo.
 
 ## Local Publishing
 
@@ -48,22 +54,22 @@ docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghrc.io/ukhsa-c
 
 *Replace `your-standards` with the path you'd like to expose your docs at.*
 
-After running this command you can view your docs by going to [http://localhost:8080/your-standards/][3], again
+After running this command you can view your docs by going to [http://localhost:8080/your-standards/][9], again
 replacing `your-standards` with the path you specified previously.
 While this docker command is running it will notice when files change and update them so you can see how they look live.
 
 ## Contributing
 
-We welcome contributions to improve these guidelines. Please read our [Contributing Guidelines][4] for
+We welcome contributions to improve these guidelines. Please read our [Contributing Guidelines][10] for
 details on how to get involved.
 
 ## Licence
 
-Unless stated otherwise, the codebase is released under [the MIT License][5].
+Unless stated otherwise, the codebase is released under [the MIT License][11].
 This covers both the codebase and any sample code in the documentation.
 
-The documentation is [© Crown copyright][6] and available under the terms
-of the [Open Government 3.0][7] licence.
+The documentation is [© Crown copyright][12] and available under the terms
+of the [Open Government 3.0][13] licence.
 
 ## Contact
 
@@ -71,8 +77,14 @@ TODO
 
 [1]: https://ukhsa-collaboration.github.io/standards-org/
 [2]: https://github.com/ukhsa-collaboration/standards-template
-[3]: http://localhost:8080/your-standards/
-[4]: CONTRIBUTING.md
-[5]: LICENCE
-[6]: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
-[7]: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+[3]: https://www.11ty.dev
+[4]: https://github.com/x-govuk/govuk-eleventy-plugin
+[5]: https://www.11ty.dev/docs/data-frontmatter/
+[6]: https://x-govuk.github.io/govuk-eleventy-plugin/layouts/sub-navigation/
+[7]: https://github.com/orgs/ukhsa-collaboration/teams/org-standards-admins
+[8]: https://github.com/ukhsa-collaboration/standards-org
+[9]: http://localhost:8080/your-standards/
+[10]: CONTRIBUTING.md
+[11]: LICENCE
+[12]: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+[13]: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
