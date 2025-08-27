@@ -2,7 +2,6 @@
   "name": "standards-template",
   "version": "0.0.1",
   "description": "UKHSA standards template repository for teams to create their own standards documentation.",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "prepare": "husky && git config commit.Template .gitmessage"
