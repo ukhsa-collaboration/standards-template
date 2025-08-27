@@ -1,4 +1,4 @@
-import { calloutMarkerPlugin } from './callout-plugin.mjs'
+import { calloutMarkerPlugin } from './src/callout-plugin.mjs'
 
 export default {
   settings: {
