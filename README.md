@@ -67,7 +67,13 @@ npx remark docs/ --ext .md --output
 
 ### Publishing your documentation
 
-Contact a member of the [Org Standards Admins][7] team and they will add your repository to the [standards-org][8] repo.
+To publish your documentation it will need to be added to the [standards-org][7] repository.
+This is the main repository from which the standards website is published.
+To add the configuration necessary to publish your documentation through the site, you can either:
+
+- Contact a member of the [Org Standards Admins][8] team, and they will add your repository to the repo
+- Create a pull request on the repo yourself, and then a member of the [Org Standards Admins][8] team will review and
+  merge
 
 ## Local Publishing
 
@@ -106,8 +112,8 @@ TODO
 [4]: https://github.com/x-govuk/govuk-eleventy-plugin
 [5]: https://www.11ty.dev/docs/data-frontmatter/
 [6]: https://x-govuk.github.io/govuk-eleventy-plugin/layouts/sub-navigation/
-[7]: https://github.com/orgs/ukhsa-collaboration/teams/org-standards-admins
-[8]: https://github.com/ukhsa-collaboration/standards-org
+[7]: https://github.com/ukhsa-collaboration/standards-org
+[8]: https://github.com/orgs/ukhsa-collaboration/teams/org-standards-admins
 [9]: http://localhost:8080/your-standards/
 [10]: CONTRIBUTING.md
 [11]: LICENCE
