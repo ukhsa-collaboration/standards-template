@@ -229,7 +229,7 @@ Resolves issue #123"
    git rebase origin/main
    ```
 
-   > \[!NOTE]
+   > [!NOTE]
    > This repository maintains a [linear commit history][34].
    >
    > Always use [`rebase`][35] instead of `merge` when keeping your branch up to date with the `main` branch.
@@ -313,7 +313,7 @@ Resolves issue #123"
    git rebase -i origin/main
    ```
 
-   > \[!NOTE]
+   > [!NOTE]
    > This repository maintains a [linear commit history][34].
    >
    > Always use [`rebase`][35] instead of `merge` when keeping your branch up to date with the `main` branch (see previous step).
