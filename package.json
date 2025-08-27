@@ -4,7 +4,8 @@
   "description": "UKHSA standards template repository for teams to create their own standards documentation.",
   "type": "module",
   "scripts": {
-    "prepare": "husky && git config commit.Template .gitmessage"
+    "prepare": "husky && git config commit.Template .gitmessage",
+    "serve": "node src/serve.js"
   },
   "repository": {
     "type": "git",
