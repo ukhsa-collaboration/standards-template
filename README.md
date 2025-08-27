@@ -77,17 +77,18 @@ To add the configuration necessary to publish your documentation through the sit
 
 ## Local Publishing
 
-To see how your docs look locally before publishing them you can use a container image:
+To see how your docs look locally before publishing them you can use this handy script:
 
 ```bash
-docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghcr.io/ukhsa-collaboration/standards-org
+npm run serve
 ```
 
-*Replace `your-standards` with the path you'd like to expose your docs at.*
+This uses docker to host your docs under the hood.
+After running this script you can view your docs by going to [http://localhost:8080/your-standards/][9], replacing
+`your-standards` with the path you specified previously.
+This script will automatically work out the path based on the 11ty data config file in `docs/`.
 
-After running this command you can view your docs by going to [http://localhost:8080/your-standards/][9], again
-replacing `your-standards` with the path you specified previously.
-While this docker command is running it will notice when files change and update them so you can see how they look live.
+While this script is running it will notice when files change and update them so you can see how they look live.
 
 ## Contributing
 

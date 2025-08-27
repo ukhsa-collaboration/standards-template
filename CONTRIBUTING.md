@@ -337,14 +337,15 @@ It's not much use to see the template files in the `docs/` directory given they 
 however, you can run this command to locally view them:
 
 ```bash
-docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghcr.io/ukhsa-collaboration/standards-org
+npm run serve
 ```
 
-*Replace `your-standards` with the path you'd like to expose your docs at.*
+This uses docker to host your docs under the hood.
+After running this script you can view your docs by going to [http://localhost:8080/your-standards/][9], replacing
+`your-standards` with the path you specified previously.
+This script will automatically work out the path based on the 11ty data config file in `docs/`.
 
-After running this command you can view your docs by going to [http://localhost:8080/your-standards/][42], again
-replacing `your-standards` with the path you specified previously.
-While this docker command is running it will notice when files change and update them so you can see how they look live.
+While this script is running it will notice when files change and update them so you can see how they look live.
 
 ## Documentation Deployment
 
@@ -397,4 +398,3 @@ Thank you for contributing to improving engineering standards, guidelines and be
 [39]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch
 [40]: https://ukhsa-collaboration.github.io/standards-org/
 [41]: https://datatracker.ietf.org/doc/html/rfc2119
-[42]: http://localhost:8080/your-standards/
