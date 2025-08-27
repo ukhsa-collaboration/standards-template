@@ -197,19 +197,19 @@ Footer:
 | `revert` | Reverts a previous commit | Depends on the reverted change |
 | `test` | Adding or correcting tests | None |
 
-> \[!NOTE]
-> A commit that has a footer `BREAKING CHANGE:`, or appends a `!` after the type/scope, introduces a breaking API change (correlating with [`MAJOR`][32] in Semantic Versioning). A BREAKING CHANGE can be part of commits of any *type*.
+> [!NOTE]
+> A commit that has a footer `BREAKING CHANGE:`, or appends a `!` after the type, introduces a breaking API change (correlating with [`MAJOR`][32] in Semantic Versioning). A BREAKING CHANGE can be part of commits of any *type*.
 
 #### Example
 
 ```bash
-git commit -m "feat(scope): add rate limiting recommendations"
+git commit -m "feat: add rate limiting recommendations"
 ```
 
 or with more details:
 
 ```bash
-git commit -m "fix(scope): correct validation for API versioning
+git commit -m "fix: correct validation for API versioning
 
 Resolves issue #123"
 ```
