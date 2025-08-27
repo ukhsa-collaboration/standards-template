@@ -337,7 +337,7 @@ It's not much use to see the template files in the `docs/` directory given they 
 however, you can run this command to locally view them:
 
 ```bash
-docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghrc.io/ukhsa-collaboration/standards-org
+docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghcr.io/ukhsa-collaboration/standards-org
 ```
 
 *Replace `your-standards` with the path you'd like to expose your docs at.*

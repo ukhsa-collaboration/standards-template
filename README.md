@@ -74,7 +74,7 @@ Contact a member of the [Org Standards Admins][7] team and they will add your re
 To see how your docs look locally before publishing them you can use a container image:
 
 ```bash
-docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghrc.io/ukhsa-collaboration/standards-org
+docker run -p "8080:8080" -v "./docs:/site/docs/your-standards/" ghcr.io/ukhsa-collaboration/standards-org
 ```
 
 *Replace `your-standards` with the path you'd like to expose your docs at.*
