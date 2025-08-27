@@ -1,3 +1,5 @@
+import { calloutMarkerPlugin } from './callout-plugin.mjs'
+
 export default {
   settings: {
     bullet: '-',
@@ -7,6 +9,7 @@ export default {
   plugins: [
     ['frontmatter', {type: 'yaml', marker: '-'}],
     ['gfm', {tablePipeAlign: false}],
-    ['renumber-references', {preserveAlphanumericDefinitions: false}]
+    ['renumber-references', {preserveAlphanumericDefinitions: false}],
+    calloutMarkerPlugin
   ]
 }
