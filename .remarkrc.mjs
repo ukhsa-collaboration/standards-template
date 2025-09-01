@@ -7,9 +7,11 @@ export default {
     incrementListMarker: false
   },
   plugins: [
-    ['frontmatter', {type: 'yaml', marker: '-'}],
-    ['gfm', {tablePipeAlign: false}],
-    ['renumber-references', {preserveAlphanumericDefinitions: false}],
-    calloutMarkerPlugin
+    ['frontmatter', { type: 'yaml', marker: '-' }],
+    ['gfm', { tablePipeAlign: false }],
+    ['renumber-references', { preserveAlphanumericDefinitions: false }],
+    calloutMarkerPlugin,
+    'preset-lint-consistent',
+    'preset-lint-recommended'
   ]
 }
