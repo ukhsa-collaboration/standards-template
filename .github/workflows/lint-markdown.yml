@@ -23,4 +23,4 @@ jobs:
         run: npm ci
 
       - name: Lint markdown
-        run: npx remark docs/ --ext .md --use remark-preset-lint-consistent --use remark-preset-lint-recommended --frail
+        run: npm run lint:md
