@@ -4,6 +4,8 @@
   "description": "UKHSA standards template repository for teams to create their own standards documentation.",
   "type": "module",
   "scripts": {
+    "fmt:md": "remark docs/ --ext .md --output",
+    "lint:md": "remark docs/ --ext .md --frail",
     "prepare": "husky && git config commit.Template .gitmessage",
     "start": "node src/serve.js"
   },

@@ -1,2 +1,2 @@
 # lint the markdown on commit
-remark docs/ --ext .md --frail
+npm run lint:md
