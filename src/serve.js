@@ -21,6 +21,7 @@ console.log('Use ctrl-c to stop serving the docs\n');
 const serve = spawn('docker', [
   'run',
   '--rm',
+  '--pull=always',
   '-p',
   '8080:8080',
   '-v',
