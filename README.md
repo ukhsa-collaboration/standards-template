@@ -59,10 +59,10 @@ use the same tool which provides this linting to fix the issues:
 
 ```bash
 # this is the pre-commit hook which runs to check if your markdown conforms
-npx remark docs/ --ext .md --use remark-preset-lint-consistent --use remark-preset-lint-recommended --frail
+npm run lint:md
 
 # if you have issues you can run this command to fix the problems automatically
-npx remark docs/ --ext .md --output
+npm run fmt:md
 ```
 
 ### Publishing your documentation
