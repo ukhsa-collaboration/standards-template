@@ -67,13 +67,30 @@ npm run fmt:md
 
 ### Publishing your documentation
 
-To publish your documentation it will need to be added to the [standards-org][7] repository.
-This is the main repository from which the standards website is published.
-To add the configuration necessary to publish your documentation through the site, you can either:
+Ultimately, your documentation will be published to [the UKHSA engineering standards site][1].
+Once configured correctly, this publishing is managed automatically through a GitHub action and the [standards-org][7]
+repository.
 
-- Contact a member of the [Org Standards Admins][8] team, and they will add your repository to the repo
-- Create a pull request on the repo yourself, and then a member of the [Org Standards Admins][8] team will review and
-  merge
+To set up automatically publishing:
+
+1. Contact a member of the [Org Standards Admins][8] team, and they will add your repository to the repo.
+
+   *OR*
+
+   Create a pull request on the repo yourself, and then a member of the [Org Standards Admins][8] team will review and
+   merge.
+1. Get your repository configured for access to the following org-level secrets so that they can be used in the
+   publishing workflow:
+   - `UKHSA_STANDARDS_PUBLISH_DISPATCH_APP_CLIENT_ID`
+   - `UKHSA_STANDARDS_PUBLISH_DISPATCH_APP_PRIVATE_KEY`
+   - `UKHSA_STANDARDS_PUBLISH_DISPATCH_SHARED_HMAC_KEY`
+
+After these two things are configured, you can publish by merging changes to the `main` branch in your docs repository.
+Upon new commits being added to `main`, the [publishing workflow][9] will run, triggering the publishing workflow on the
+standards-org repository to build and publish the changes.
+At present, this standards-org publishing workflow requires manual sign off before it will complete.
+This is to ensure changes made while this new process is bedded in are correct and valid, but we may remove it in the
+future to allow teams to publish automatically without any manual intervention.
 
 ## Local Publishing
 
@@ -84,7 +101,7 @@ npm run serve
 ```
 
 This uses docker to host your docs under the hood.
-After running this script you can view your docs by going to [http://localhost:8080/your-standards/][9], replacing
+After running this script you can view your docs by going to [http://localhost:8080/your-standards/][10], replacing
 `your-standards` with the path you specified previously.
 This script will automatically work out the path based on the 11ty data config file in `docs/`.
 
@@ -92,16 +109,16 @@ While this script is running it will notice when files change and update them so
 
 ## Contributing
 
-We welcome contributions to improve these guidelines. Please read our [Contributing Guidelines][10] for
+We welcome contributions to improve these guidelines. Please read our [Contributing Guidelines][11] for
 details on how to get involved.
 
 ## Licence
 
-Unless stated otherwise, the codebase is released under [the MIT License][11].
+Unless stated otherwise, the codebase is released under [the MIT License][12].
 This covers both the codebase and any sample code in the documentation.
 
-The documentation is [© Crown copyright][12] and available under the terms
-of the [Open Government 3.0][13] licence.
+The documentation is [© Crown copyright][13] and available under the terms
+of the [Open Government 3.0][14] licence.
 
 ## Contact
 
@@ -115,8 +132,9 @@ TODO
 [6]: https://x-govuk.github.io/govuk-eleventy-plugin/layouts/sub-navigation/
 [7]: https://github.com/ukhsa-collaboration/standards-org
 [8]: https://github.com/orgs/ukhsa-collaboration/teams/org-standards-admins
-[9]: http://localhost:8080/your-standards/
-[10]: CONTRIBUTING.md
-[11]: LICENCE
-[12]: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
-[13]: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+[9]: .github/workflows/publish-guidelines.yml
+[10]: http://localhost:8080/your-standards/
+[11]: CONTRIBUTING.md
+[12]: LICENCE
+[13]: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+[14]: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
