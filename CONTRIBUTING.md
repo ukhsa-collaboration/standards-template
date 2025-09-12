@@ -341,8 +341,8 @@ npm run serve
 ```
 
 This uses docker to host your docs under the hood.
-After running this script you can view your docs by going to [http://localhost:8080/your-standards/][9], replacing
-`your-standards` with the path you specified previously.
+After running this script you can view your docs by going to [http://localhost:8080/standards-template/][9], replacing
+`standards-template` with the path you specified previously.
 This script will automatically work out the path based on the 11ty data config file in `docs/`.
 
 While this script is running it will notice when files change and update them so you can see how they look live.

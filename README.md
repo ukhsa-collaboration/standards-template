@@ -27,7 +27,7 @@ directory.
 After creating a new repository based on this template, please undertake the following steps:
 
 1. Replace the template specific parts of this readme file with suitable readme documentation for your new repository.
-1. Rename `docs/your-standards.11tydata.json`, replacing the `your-standards` part with the name to be used when
+1. Rename `docs/standards-template.11tydata.json`, replacing the `standards-template` part with the name to be used when
    published.
 1. Run `npm install` from the root of this repository to install the dev dependencies.
 1. Update the `CONTRIBUTING.md` guidelines to meet your expectations for contributors. This file is currently written
@@ -39,7 +39,7 @@ All your documentation should be written in Markdown in the `docs/` directory.
 The documentation is published using [Eleventy][3] along with the [UK Gov Eleventy Plugin][4] for styling.
 
 A basic `index.md` is provided which can be modified to provide the index page for your documentation.
-At present, the `your-standards.11tydata.json` file is also provided which sets some common [front matter][5] for the pages
+At present, the `standards-template.11tydata.json` file is also provided which sets some common [front matter][5] for the pages
 of documentation so that they are displayed in a [sub-navigation layout][6].
 Of course if you want to use a different layout, you can.
 
@@ -101,8 +101,8 @@ npm run serve
 ```
 
 This uses docker to host your docs under the hood.
-After running this script you can view your docs by going to [http://localhost:8080/your-standards/][10], replacing
-`your-standards` with the path you specified previously.
+After running this script you can view your docs by going to [http://localhost:8080/standards-template/][10], replacing
+`standards-template` with the path you specified previously.
 This script will automatically work out the path based on the 11ty data config file in `docs/`.
 
 While this script is running it will notice when files change and update them so you can see how they look live.
@@ -133,7 +133,7 @@ TODO
 [7]: https://github.com/ukhsa-collaboration/standards-org
 [8]: https://github.com/orgs/ukhsa-collaboration/teams/org-standards-admins
 [9]: .github/workflows/publish-guidelines.yml
-[10]: http://localhost:8080/your-standards/
+[10]: http://localhost:8080/standards-template/
 [11]: CONTRIBUTING.md
 [12]: LICENCE
 [13]: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
